@@ -21,19 +21,19 @@ $ git config --global user.email "@naver.com"
 $ git config --global user.name "이름 입력"
 ```
 
-1. **커밋에 추가할 파일 선택**
+2. **커밋에 추가할 파일 선택**
 
 ```bash
 $ git add 추가할 파일
 ```
 
-1. **커밋 상세 설명 설정**
+3. **커밋 상세 설명 설정**
 
 ```bash
 $ git commit -m "사이ㅡ 설명 추가"
 ```
 
-1. **다른 커밋으로 시간 여행 하기**
+4. **다른 커밋으로 시간 여행 하기**
    - 지금까지 만든 커밋 아이디 확인하기.
 
 ```bash
@@ -53,7 +53,7 @@ $git checkout [log주소]
 $ git remote add origin [깃주소]
 ```
 
-1. 로컬저장소에 있는 커밋들 push 명령어로 원격 저장소에 올리기.
+3. 로컬저장소에 있는 커밋들 push 명령어로 원격 저장소에 올리기.
 
 ```bash
 $ git push origin master
