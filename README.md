@@ -1,5 +1,5 @@
 # -TIL
-Today I Learned
+Today I Learned.
 
 </br></br></br></br>
 # Git
