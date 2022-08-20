@@ -21,7 +21,8 @@ function sum() {
 
 ⇒
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/40f4052d-1643-4453-ae71-7f73bcb0b164/Untitled.png)
+![Untitled (1)](https://user-images.githubusercontent.com/85959639/185751403-42e79c90-c9ce-481f-9e68-6f9f8e30eb53.png)
+
 
 ### REST 매개변수가 필요한 이유
 
@@ -41,7 +42,7 @@ function sum() {
 //사용 불가
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5a0616ca-cc19-47a2-a610-9451dbc9ca20/Untitled.png)
+![Untitled (2)](https://user-images.githubusercontent.com/85959639/185751412-eb8624d2-8666-43da-a1d1-97475e43f7da.png)
 
 ### REST 매개변수
 
