@@ -13,3 +13,5 @@ Today I Learned.
 - [JS 함수](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS_function.md)
 - [JS This](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS_this_keyword.md)
 - [JS Try/Catch구문](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS_try_catch.md)
+- [JS 디폴트 매개변수](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS_defaultParameter.md)
+- [JS 스프레드 구문](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS_spread.md)
