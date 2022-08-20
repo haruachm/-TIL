@@ -16,3 +16,5 @@ Today I Learned.
 - [디폴트 매개변수](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS_defaultParameter.md)
 - [스프레드 구문](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS_spread.md)
 - [REST 매개변수](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS.restParameter.md)
+- [구조분해](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS_destructuring.md)
+- [문서객체모델(DOM)](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS_DOM.md)
