@@ -333,3 +333,96 @@ firstImg.nextSibling;
 
 - 한 요소에서 이전과 다음 형제로 이동한다.
 - **공백과 텍스트 노드를 무시**한다.
+
+### document.createElement & append
+
+> id가 있는 요소에 추가하기
+
+```jsx
+$("#id").append("");
+```
+
+> `**document.createElement**`
+
+- 새로운 요소 생성
+
+```jsx
+const newImage = document.createElement("img");
+//이미지 객체 생성
+newImage.src =
+  "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80";
+//출처를 추가한다. 아직
+```
+
+> **`appendChild`**
+
+- 생성한 요소를 추가할 장소를 정한다.
+  - 빈 요소 생성 → 요소 변경 → 추가
+  - append 메서드 사용
+  → 이미지 삽입
+
+```jsx
+document.body.appendChild(newImage);
+//newImage 변수에 있는 요소를 body에 추가해 페이지에 삽입
+newImage.classList.add("squear");
+```
+
+→ H3 삽입
+
+```jsx
+const newH3 = document.createElement("h3");
+newH3.innerText = "새로운 사진입니다!";
+document.body.appendChild(newH3);
+```
+
+> `**append**`
+
+- Internet Explorer에서는 지원이 안 된다.
+- 한 번에 한 개 이상 삽입이 가능하다
+
+```jsx
+const p = document.querySelector("p");
+p.append("나는 텍스트야", "나도 텍스트야");
+//동시에 여러 개를 삽입할 수 있다.
+//appendChild와 동일하다.
+```
+
+> `**prepend**`
+
+- Internet Explorer에서는 지원이 안 된다.
+- 어떤 항목을 요소의 첫 번째 자녀로 삽입한다.
+
+```jsx
+const newB = document.createElement("b");
+newB.append("안녕!");
+p.prepend(newB);
+//앞쪽에 삽입
+```
+
+> **`.insertAdjacentElement(position, element)` 엘리먼트 특정 위치에 삽입**
+
+- **Parameter - position**
+  - `‘beforebegin’` : element 앞에
+  - `‘afterbegin’` : element 안에 가장 첫 번째 child
+  - `‘beforeend’` : element 안에 가장 마지막 child
+  - `‘afterend’` : element 뒤에
+    - afterbegin 과 beforeend는 꼭 부모가 있어야 한다.
+
+```jsx
+//h1제목 뒤에 h2 추가하기
+const h2 = document.createElement("h2");
+h2.append("나는 두번째 제목");
+const h1 = document.querySelector("h1");
+h1.insertAdjacentElement("afterend", h2);
+```
+
+> **`after` 요소 뒤에 삽입**
+
+- Internet Explorer에서는 지원이 안 된다.
+
+```jsx
+//h1제목 뒤에 h3 추가하기
+const h3 = document.createElement("h3");
+h3.innerText = "나는 세번째 제목";
+h1.after(h3);
+```
