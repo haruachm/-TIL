@@ -2,7 +2,7 @@
 
 ### 프로젝트 생성
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d54ef182-b5e4-4015-8a69-d0572c0eae08/Untitled.png)
+![Untitled (5)](https://user-images.githubusercontent.com/85959639/186087336-d9d672c3-d17b-495d-b486-50ede8d72eda.png)
 
 - **Name** : 프로젝트 이름
 - **Package name** : 앱을 배포하기 위한 고유한 패키지명 작성해야 한다. 그렇지 않으면 플레이 스토어에서 승인이 안 되고, 앱을 배포할 수 없게 된다.
@@ -19,15 +19,15 @@
 
 1. **상단에 AVD Manager을 클릭한다.**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c33b2c28-ac87-414c-b00b-169ee742e496/Untitled.png)
+![Untitled (6)](https://user-images.githubusercontent.com/85959639/186087359-71332fbd-5c90-465f-a43a-b42fa118dcc6.png)
 
-1. **애뮬레이터 디바이스를 선택한다.**
+2. **애뮬레이터 디바이스를 선택한다.**
 
 - 플레이스토어 마크가 있으면, 애뮬레이터에 플레이스토어를 설치할 수 있고, 플레이스토어의 확장자를 이용할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1ab6ac13-7497-4aac-b658-8562cbe43ecf/Untitled.png)
+![Untitled (7)](https://user-images.githubusercontent.com/85959639/186087374-16810688-dff4-4242-ba3a-ab743a580a39.png)
 
-1. **안드로이드 스튜디오 버전이라고도 하는 시스템 이미지를 선택한다.**
+3. **안드로이드 스튜디오 버전이라고도 하는 시스템 이미지를 선택한다.**
 
 - 최신 버전을 선택한다.
 - 사용하는 PC 기기에 따라 다르며, API레벨과 Google Play API에 따라 사용용도에 따라 선택을 한다.
@@ -35,13 +35,13 @@
 - 변경하고자 한다면 다시 다운로드 받아 설치하면 된다.
 - • 1GB가 넘어, 용량이 크다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6c65139b-e93d-462a-9190-927ec16bd56d/Untitled.png)
+![Untitled (8)](https://user-images.githubusercontent.com/85959639/186087390-c1264185-0b13-40f0-92d6-7ac3b29ec33a.png)
 
-1. **라이센스를 동의하고 설치한다.**
+4. **라이센스를 동의하고 설치한다.**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/80f95e4e-1b8f-4763-82c6-73ef08fe6701/Untitled.png)
+![Untitled (9)](https://user-images.githubusercontent.com/85959639/186088115-be422a2f-ad74-4923-9c54-d4680cd7aedd.png)
 
-1. **애뮬레이터 설정을 한다.**
+5. **애뮬레이터 설정을 한다.**
 
 - 알아보기 쉽게 Android 12 버전을 추가해주고, 가로 세로를 설정해준다.
 - 고급 설정을 열어 추가적인 기능을 설정해준다.
@@ -52,10 +52,13 @@
   - RAM, 저장 공간 설정 가능
   - 여러 애뮬레이터를 설정할 수 있지만, 컴퓨터 공간을 많이 사용하므로 1개를 설치를 추천한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9eb20102-3e95-4910-8f3d-8a898202f4d8/Untitled.png)
+![Untitled (10)](https://user-images.githubusercontent.com/85959639/186088097-2a2a1b35-f442-484e-8041-a04f48bf55ac.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/06d2ddef-1ec7-4193-97be-07f11c3283cb/Untitled.png)
+![Untitled (11)](https://user-images.githubusercontent.com/85959639/186088086-8cb318f1-9902-4d7c-9803-2f243621adb0.png)
 
-1. **설치된 애뮬레이터를 키고 설정을 변경할 수 있다.**
+6. **설치된 애뮬레이터를 키고 설정을 변경할 수 있다.**
 
 - 설치된 모바일 기기의 설정 값들 설정 가능
+
+![Untitled (12)](https://user-images.githubusercontent.com/85959639/186088072-c52a01ac-4de2-4561-bc79-2af8498afa09.png)
+
