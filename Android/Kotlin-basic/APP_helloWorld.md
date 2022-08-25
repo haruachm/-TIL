@@ -19,9 +19,52 @@
   - setOnclickListener을 사용해, 특정 행동이 일어나면 발생하는 이벤트를 설정할 수 있다.
 
 ```kotlin
-val btnClick = findViewById<Button>(R.id.mybutton)
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val btnClick = findViewById<Button>(R.id.mybutton)
+        val textViewClick = findViewById<TextView>(R.id.mytextView)
+
         btnClick.setOnClickListener {
-            btnClick.text = "나는야 버튼"
-        }
-//버튼이 눌릴 때까지 대기, 눌리면 대괄호 안에 코드가 실행
+            btnClick.text = "클릭하셨습니다."
+
+            textViewClick.text = "잘했어요!"
+        }//버튼이 눌릴 때까지 대기, 눌리면 대괄호 안에 코드가 실행
+    }
+}
+
 ```
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d44a4a85-f89d-43b9-a458-7b6a956a252c/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7aab9c8e-8e08-4960-904f-29d1fa4e2987/Untitled.png)
+
+### **버튼 클릭 시 카운팅 ⇒ 사람 수 체크하는 앱**
+
+```kotlin
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val btnClick = findViewById<Button>(R.id.mybutton)
+        val textViewClick = findViewById<TextView>(R.id.mytextView)
+        var peopleNumber = 0
+
+        btnClick.setOnClickListener {
+            peopleNumber += 1
+
+            textViewClick.text = peopleNumber.toString()
+						Toast.makeText(this, "카운트하였습니다", Toast.LENGTH_LONG).show()
+        } //toString()를 사용해 숫자를 text로 변경해준다.
+    }
+}
+```
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5fc055de-be4f-4dac-b11f-4dddf06178b1/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3c4d13b0-d0a0-45ae-b8bd-7aba913e69be/Untitled.png)
+
+`Toast.makeText(this, "카운트하였습니다", Toast.*LENGTH_LONG*).show()` : 버튼 클릭 이벤트 발생할 때, “카운트 하였습니다”라는 안내창이 나타났다가 사라진다.
