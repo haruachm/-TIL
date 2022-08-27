@@ -7,7 +7,7 @@ Today I Learned.
 - [Git 커밋메시지](https://github.com/haruachm/-TIL/blob/main/Git/Git%20command.md)
 
 </br></br>
-# JavaScript
+# JavaScript 
 - [변수](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS_value.md)
 - [메서드](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS_method.md)
 - [함수](https://github.com/haruachm/-TIL/blob/main/JavaScript/JS_function.md)
