@@ -2,9 +2,11 @@
 
 - file descriptor란? : 컴퓨터에 어떤 파일을 읽고 싶다면 OS는 디스크에서 해당 파일을 찾아 파일에 대한 정보를 메모리(DRAM)으로 보낸다. 이때 메모리 상에서 파일을 아래처럼 객체화 시키는데, 이때 객체의 포인터 주소를 **file descriptor** 라고 한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7be0ddea-e85c-41f3-b945-39417cf6d645/Untitled.png)
+![Untitled (1)](https://user-images.githubusercontent.com/85959639/192093991-11278c1b-5e54-462d-be3f-1be41b2dca07.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e3889195-0226-448c-8a2b-e26b548dc37a/Untitled.png)
+![Untitled (2)](https://user-images.githubusercontent.com/85959639/192093997-44e2a4be-bb06-49a3-b948-3f4a795d23df.png)
+
+
 
 ### open( ) | close( )
 
@@ -26,7 +28,8 @@ int open(const char *pathNAme, int flags, [mode_t mode]);
 
 오류가 발생하면 **-1** 을 반환
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/703c622a-b3d1-4506-9bc8-ff3f65346ace/Untitled.png)
+![Untitled (3)](https://user-images.githubusercontent.com/85959639/192094002-1493edec-386c-4c4c-b619-0952b4657ac6.png)
+
 
 ```c
 #include <unisted.h>
