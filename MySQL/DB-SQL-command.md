@@ -1,0 +1,8 @@
+- DDL (Data Definition Language) : DB 구조 정의 또는 변경
+  - `**Create**`, `**Alter**`, `**Drop**` 등
+- DML (Data Manipulation Language) : 데이터 삽입, 삭제, 수정 등
+  - `**Select**`, `**Insert**`, `**Updata**`, `**Delete**` 등
+- DCL (Data Control Language): DB 권한 제어
+  - `**Grant**`, `**Revoke**` 등
+- TCL (Transaction Control Language): 조작된 결과를 트랜젝션 별로 제어
+  - `**Commit**`, `**Rollback**` 등
