@@ -43,3 +43,25 @@ CREATE TABLE table_명(
 
 )
 ```
+
+### 릴레이션 관련 명령어
+
+`**show tables;**` : DB 안에 있는 테이블 출력
+
+**`create table [릴레이션 이름]`** : 릴레이션 정의
+
+**`drop table r;`** : 릴레이션 제거
+
+`**delete from r;**` : 릴레이션 r의 모든 튜플 제거, 릴레이션 r은 남아있음.
+
+**`alter table r add A D;`** : 이미 존재하는 릴레이션 r에 속성을 추가. A는 추가될 속성의 이름, D는 속성의 도메인
+
+**`alter table r drop A;`** : 릴레이션 r의 A 속성을 제거
+
+### create table 명령 옵션
+
+**`primary key(A1, A2, … , Ai)`** : 주 키(primary key) 명세
+
+**`foreign key(A1, A2, … , Ai) references s` :** 외래 키(foreign key) 명세, 튜플에 대한 속성값이 반드시 릴레이션 s가 갖고 있는 튜플의 주 키 속성 값에 상응해야 함.
+
+**`not null;`** : 널 값을 허용하지 않는 제약 조건, 도메인에서 널 값을 제외
