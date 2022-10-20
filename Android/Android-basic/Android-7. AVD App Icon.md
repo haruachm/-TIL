@@ -10,7 +10,7 @@
 
 본인은 Instagram의 로고 아이콘을 사용하였다.
 
-이미지의 크기는 96x96 정도의 \*png 파일을 사용하는 것이 좋다.
+이미지의 크기는 96x96 정도의 *png 파일을 사용하는 것이 좋다.
 
 나는 64px x 64px의 png 파일을 사용했다.
 
@@ -42,13 +42,13 @@
 
 ![https://blog.kakaocdn.net/dn/c1RCY4/btrOQl9OeI8/BlNGKXaLuxdyulP3xroAi1/img.png](https://blog.kakaocdn.net/dn/c1RCY4/btrOQl9OeI8/BlNGKXaLuxdyulP3xroAi1/img.png)
 
-```
+```java
 setTitle("    Instagram");
 ```
 
 작업 표시줄의 제목을 설정
 
-```
+```java
 getSupportActionBar().setDisplayShowHomeEnabled(true);
 ```
 
@@ -56,7 +56,7 @@ getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 상단 작업표시줄에 응용 프로그램 홈 어포던스를 포함할지 여부를 설정
 
-```
+```java
 getSupportActionBar().setIcon(R.drawable.instagram);
 ```
 
@@ -66,7 +66,7 @@ getSupportActionBar().setIcon(R.drawable.instagram);
 
 ![https://blog.kakaocdn.net/dn/ziPBB/btrOFk4DQKY/zJatJ0qPIsUyjCfOECnUjk/img.png](https://blog.kakaocdn.net/dn/ziPBB/btrOFk4DQKY/zJatJ0qPIsUyjCfOECnUjk/img.png)
 
-```
+```java
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -83,3 +83,5 @@ public class MainActivity extends AppCompatActivity {
 ---
 
 ### **4. AVD를 실행해, 설정을 확인한다.**
+
+![https://blog.kakaocdn.net/dn/kQP66/btrOGnNF0bh/juvCeVKK2KlxMf6uY3Of41/img.png](https://blog.kakaocdn.net/dn/kQP66/btrOGnNF0bh/juvCeVKK2KlxMf6uY3Of41/img.png)
