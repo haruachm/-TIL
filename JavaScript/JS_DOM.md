@@ -23,7 +23,7 @@ DOM이란 Document Object Model로, 웹 페이지를 구성하는 JavaScript 객
   - 이를 출력하면 HTML이 아닌 JavaScript의 객체를 확인할 수 있다.
   - console.dir(document) all: 에 출력된 것 모두 객체이다.
 
-![Untitled (3)](https://user-images.githubusercontent.com/85959639/185755815-7f426adb-b485-45df-905e-c1c04822d1a9.png)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/318437a5-1384-4c47-8224-5998e150f3b1/Untitled.png)
 
 - 문서 객체는 모든 특성과 메서드를 포함하며, 웹페이지에 나타나는 모든 콘텐츠를 객체로 나타낸다.
 
@@ -71,7 +71,7 @@ const Images = document.getElementsByClassName("square");
 
 ### document.querySelector( )
 
-> 최근에 나온 메서드로 이 하나의 메서르르 사용해서 ID, 클래스, 요소 타입, 속성, CSS 스타일이든 뭐든 이용해서 선택할 수 있는 메서드이다.
+> 최근에 나온 메서드로 이 하나의 메서드를 사용해서 ID, 클래스, 요소 타입, 속성, CSS 스타일이든 뭐든 이용해서 선택할 수 있는 메서드이다.
 
 ```jsx
 document.querySelector('a[title="Java"]');
@@ -204,7 +204,7 @@ for (let link of allLinks) {
 }
 ```
 
-> `window.getComputeStyle()` 을 사용하면 계산된 스타일로 구성된 CSSStyleDeclaration이 출력된다.
+> `window.getComputeStyle()` 을 사용하면 인자로 전달받은 요소의 모든 CSS 속성값을 담은 객체를 회신한다.
 
 ```jsx
 const h1 = document.querySelector("h1");
@@ -215,7 +215,7 @@ window.getComputeStyle(h1);
 - `window.getComputedStyle(h1).color` 와 같이 **특정한 특성을 액세스**할 수 있다.
   - **⇒ 어떤 요소의 현재 스타일을 알아내고 싶을 때 사용**한다.
 
-![Untitled (4)](https://user-images.githubusercontent.com/85959639/185755846-fd6b923c-1cba-4529-96f0-4ffb3c3f4409.png)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bbb968f0-04b1-439f-9d74-e30fbefd8e6f/Untitled.png)
 
 ### ClassList
 
