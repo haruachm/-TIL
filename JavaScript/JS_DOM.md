@@ -226,13 +226,19 @@ window.getComputeStyle(h1);
    ```jsx
    const h2 = document.querySelector("h2");
    h2.setAttribute("class", "red");
-
+   //또 다른 클래스인 border를 부여하면 red를 덮어 쓴다.
    h2.setAttribute("class", "border");
-   //다시 사용하면 앞에 red 클래스를 덮어쓴다.
-   //위 방식대로 하려면 아래와 같이 해야 한다.
 
+   //덮어쓰지 않고 하려면 아래와 같이 해야 한다.
+   //현재의 클래스 속성을 current 변수에 넣는다. 결과 : current => red
    let current = h2.getAttribute("class");
+   //공백을 넣은 후에 `${}`로 함께 작성한다.
    h2.setAttribute("class", `${current} purple`);
+   //또는
+   h2.setAttribute("class", "red purple");
+
+   //위와 같은 방식은 클래스가 많을수록 힘들다.
+   //더 좋은 방법은 classList를 사용하는 방법이다.
    ```
 
 2. `classList` 객체 사용하기
