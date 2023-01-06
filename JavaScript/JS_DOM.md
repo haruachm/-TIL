@@ -244,6 +244,7 @@ window.getComputeStyle(h1);
 2. `classList` 객체 사용하기
    - 요소의 클래스를 제어하고 클래스를 검색, 조작하기 위해 호출하는 객체이다.
    - classList 안에 **내장된 메서드**가 있다.
+   - classList는 이전에 저장된 클래스를 신경쓸 필요 없이 배열로 넣는다고 생각하면 된다.
 
 > `classList.add('')` **클래스 추가하기**
 
@@ -306,7 +307,7 @@ firstPara.childElementCount;
 > `**.children` 자식 요소의 목록\*\*
 
 - HTMLCollection으로 배열은 아니지만 인덱스가 있어 반복 가능한 것을 자식 요소를 가져온다.
-- 부모는 하나지만 자식 요소는 여러 개일 수 있다.
+- **부모는 하나지만 자식 요소는 여러 개**일 수 있다.
 - 자식 요소에 작업을 하려면 반복을 걸어 작업한다.
 
 ```jsx
@@ -342,15 +343,10 @@ firstImg.nextSibling;
 
 ### document.createElement & append
 
-> id가 있는 요소에 추가하기
-
-```jsx
-$("#id").append("");
-```
-
 > `**document.createElement**`
 
 - 새로운 요소 생성
+- document.createElement 메서드에 만들고 싶은 요소의 타입, 태그이름을 전달하면 된다.
 
 ```jsx
 const newImage = document.createElement("img");
@@ -363,6 +359,7 @@ newImage.src =
 > **`appendChild`**
 
 - 생성한 요소를 추가할 장소를 정한다.
+- appendChild는 해당 부분의 마지막 자식으로 추가하는 것이다.
   - 빈 요소 생성 → 요소 변경 → 추가
   - append 메서드 사용
   → 이미지 삽입
@@ -371,6 +368,7 @@ newImage.src =
 document.body.appendChild(newImage);
 //newImage 변수에 있는 요소를 body에 추가해 페이지에 삽입
 newImage.classList.add("squear");
+//이미 지정된 이미지 크기 조정하는 squear 클래스를 넣는다.
 ```
 
 → H3 삽입
@@ -390,7 +388,13 @@ document.body.appendChild(newH3);
 const p = document.querySelector("p");
 p.append("나는 텍스트야", "나도 텍스트야");
 //동시에 여러 개를 삽입할 수 있다.
-//appendChild와 동일하다.
+//appendChild와 동일하게 뒤에 추가한다.
+```
+
+> id가 있는 요소에 추가하기
+
+```jsx
+$("#id").append("");
 ```
 
 > `**prepend**`
@@ -399,19 +403,19 @@ p.append("나는 텍스트야", "나도 텍스트야");
 - 어떤 항목을 요소의 첫 번째 자녀로 삽입한다.
 
 ```jsx
-const newB = document.createElement("b");
-newB.append("안녕!");
-p.prepend(newB);
+const new = document.createElement('b')
+new.append('안녕!')
+p.prepend(new)
 //앞쪽에 삽입
 ```
 
-> **`.insertAdjacentElement(position, element)` 엘리먼트 특정 위치에 삽입**
+> **`targetElement.insertAdjacentElement(position, element)` 엘리먼트 특정 위치에 삽입**
 
 - **Parameter - position**
-  - `‘beforebegin’` : element 앞에
-  - `‘afterbegin’` : element 안에 가장 첫 번째 child
-  - `‘beforeend’` : element 안에 가장 마지막 child
-  - `‘afterend’` : element 뒤에
+  - `‘beforebegin’` : targetElement 앞에
+  - `‘afterbegin’` : targetElement 안에 가장 첫 번째 child 앞에
+  - `‘beforeend’` : targetElement 안에 가장 마지막 child 뒤에
+  - `‘afterend’` : targetElement 뒤에
     - afterbegin 과 beforeend는 꼭 부모가 있어야 한다.
 
 ```jsx
@@ -431,4 +435,33 @@ h1.insertAdjacentElement("afterend", h2);
 const h3 = document.createElement("h3");
 h3.innerText = "나는 세번째 제목";
 h1.after(h3);
+```
+
+### removeChild & remove
+
+> `**removeChild()`\*\*
+
+- 제거하려는 요소의 부모에 메서드를 호출해서 요소를 제거한다.
+- ex) <li> 태그 부분을 제거하고 싶다면 부모인 <ul> 태그를 가져와 removeChild를 적용한다.
+
+```jsx
+const firstLi = document.querySelector("li");
+const ul = firstLi.parentElement;
+
+ul.removeChild(firstLi);
+
+//요약
+firstLi.parentElement.removeChild(firstLi);
+
+//삭제하려는 요소를 가져오고, parentElement를 사용해 부모 요소를 가져와야 하는 번거로움이 있다.
+//번거로움을 없애고자 remove를 사용
+```
+
+> **`remove()`**
+
+- 제거하려는 요소에 바로 호출하는 메서드이기에 부모나 자식을 신경쓰지 않아도 된다.
+
+```jsx
+const firstLi = document.querySelector("li");
+firstLi.remove();
 ```
