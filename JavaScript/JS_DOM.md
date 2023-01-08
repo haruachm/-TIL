@@ -23,7 +23,7 @@ DOM이란 Document Object Model로, 웹 페이지를 구성하는 JavaScript 객
   - 이를 출력하면 HTML이 아닌 JavaScript의 객체를 확인할 수 있다.
   - console.dir(document) all: 에 출력된 것 모두 객체이다.
 
-![Untitled (3)](https://user-images.githubusercontent.com/85959639/185755815-7f426adb-b485-45df-905e-c1c04822d1a9.png)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/318437a5-1384-4c47-8224-5998e150f3b1/Untitled.png)
 
 - 문서 객체는 모든 특성과 메서드를 포함하며, 웹페이지에 나타나는 모든 콘텐츠를 객체로 나타낸다.
 
@@ -71,7 +71,7 @@ const Images = document.getElementsByClassName("square");
 
 ### document.querySelector( )
 
-> 최근에 나온 메서드로 이 하나의 메서르르 사용해서 ID, 클래스, 요소 타입, 속성, CSS 스타일이든 뭐든 이용해서 선택할 수 있는 메서드이다.
+> 최근에 나온 메서드로 이 하나의 메서드를 사용해서 ID, 클래스, 요소 타입, 속성, CSS 스타일이든 뭐든 이용해서 선택할 수 있는 메서드이다.
 
 ```jsx
 document.querySelector('a[title="Java"]');
@@ -204,7 +204,7 @@ for (let link of allLinks) {
 }
 ```
 
-> `window.getComputeStyle()` 을 사용하면 계산된 스타일로 구성된 CSSStyleDeclaration이 출력된다.
+> `window.getComputeStyle()` 을 사용하면 인자로 전달받은 요소의 모든 CSS 속성값을 담은 객체를 회신한다.
 
 ```jsx
 const h1 = document.querySelector("h1");
@@ -215,7 +215,7 @@ window.getComputeStyle(h1);
 - `window.getComputedStyle(h1).color` 와 같이 **특정한 특성을 액세스**할 수 있다.
   - **⇒ 어떤 요소의 현재 스타일을 알아내고 싶을 때 사용**한다.
 
-![Untitled (4)](https://user-images.githubusercontent.com/85959639/185755846-fd6b923c-1cba-4529-96f0-4ffb3c3f4409.png)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bbb968f0-04b1-439f-9d74-e30fbefd8e6f/Untitled.png)
 
 ### ClassList
 
@@ -226,18 +226,25 @@ window.getComputeStyle(h1);
    ```jsx
    const h2 = document.querySelector("h2");
    h2.setAttribute("class", "red");
-
+   //또 다른 클래스인 border를 부여하면 red를 덮어 쓴다.
    h2.setAttribute("class", "border");
-   //다시 사용하면 앞에 red 클래스를 덮어쓴다.
-   //위 방식대로 하려면 아래와 같이 해야 한다.
 
+   //덮어쓰지 않고 하려면 아래와 같이 해야 한다.
+   //현재의 클래스 속성을 current 변수에 넣는다. 결과 : current => red
    let current = h2.getAttribute("class");
+   //공백을 넣은 후에 `${}`로 함께 작성한다.
    h2.setAttribute("class", `${current} purple`);
+   //또는
+   h2.setAttribute("class", "red purple");
+
+   //위와 같은 방식은 클래스가 많을수록 힘들다.
+   //더 좋은 방법은 classList를 사용하는 방법이다.
    ```
 
 2. `classList` 객체 사용하기
    - 요소의 클래스를 제어하고 클래스를 검색, 조작하기 위해 호출하는 객체이다.
    - classList 안에 **내장된 메서드**가 있다.
+   - classList는 이전에 저장된 클래스를 신경쓸 필요 없이 배열로 넣는다고 생각하면 된다.
 
 > `classList.add('')` **클래스 추가하기**
 
@@ -300,7 +307,7 @@ firstPara.childElementCount;
 > `**.children` 자식 요소의 목록\*\*
 
 - HTMLCollection으로 배열은 아니지만 인덱스가 있어 반복 가능한 것을 자식 요소를 가져온다.
-- 부모는 하나지만 자식 요소는 여러 개일 수 있다.
+- **부모는 하나지만 자식 요소는 여러 개**일 수 있다.
 - 자식 요소에 작업을 하려면 반복을 걸어 작업한다.
 
 ```jsx
@@ -336,15 +343,10 @@ firstImg.nextSibling;
 
 ### document.createElement & append
 
-> id가 있는 요소에 추가하기
-
-```jsx
-$("#id").append("");
-```
-
 > `**document.createElement**`
 
 - 새로운 요소 생성
+- document.createElement 메서드에 만들고 싶은 요소의 타입, 태그이름을 전달하면 된다.
 
 ```jsx
 const newImage = document.createElement("img");
@@ -357,6 +359,7 @@ newImage.src =
 > **`appendChild`**
 
 - 생성한 요소를 추가할 장소를 정한다.
+- appendChild는 해당 부분의 마지막 자식으로 추가하는 것이다.
   - 빈 요소 생성 → 요소 변경 → 추가
   - append 메서드 사용
   → 이미지 삽입
@@ -365,6 +368,7 @@ newImage.src =
 document.body.appendChild(newImage);
 //newImage 변수에 있는 요소를 body에 추가해 페이지에 삽입
 newImage.classList.add("squear");
+//이미 지정된 이미지 크기 조정하는 squear 클래스를 넣는다.
 ```
 
 → H3 삽입
@@ -384,7 +388,13 @@ document.body.appendChild(newH3);
 const p = document.querySelector("p");
 p.append("나는 텍스트야", "나도 텍스트야");
 //동시에 여러 개를 삽입할 수 있다.
-//appendChild와 동일하다.
+//appendChild와 동일하게 뒤에 추가한다.
+```
+
+> id가 있는 요소에 추가하기
+
+```jsx
+$("#id").append("");
 ```
 
 > `**prepend**`
@@ -393,19 +403,19 @@ p.append("나는 텍스트야", "나도 텍스트야");
 - 어떤 항목을 요소의 첫 번째 자녀로 삽입한다.
 
 ```jsx
-const newB = document.createElement("b");
-newB.append("안녕!");
-p.prepend(newB);
+const new = document.createElement('b')
+new.append('안녕!')
+p.prepend(new)
 //앞쪽에 삽입
 ```
 
-> **`.insertAdjacentElement(position, element)` 엘리먼트 특정 위치에 삽입**
+> **`targetElement.insertAdjacentElement(position, element)` 엘리먼트 특정 위치에 삽입**
 
 - **Parameter - position**
-  - `‘beforebegin’` : element 앞에
-  - `‘afterbegin’` : element 안에 가장 첫 번째 child
-  - `‘beforeend’` : element 안에 가장 마지막 child
-  - `‘afterend’` : element 뒤에
+  - `‘beforebegin’` : targetElement 앞에
+  - `‘afterbegin’` : targetElement 안에 가장 첫 번째 child 앞에
+  - `‘beforeend’` : targetElement 안에 가장 마지막 child 뒤에
+  - `‘afterend’` : targetElement 뒤에
     - afterbegin 과 beforeend는 꼭 부모가 있어야 한다.
 
 ```jsx
@@ -425,4 +435,33 @@ h1.insertAdjacentElement("afterend", h2);
 const h3 = document.createElement("h3");
 h3.innerText = "나는 세번째 제목";
 h1.after(h3);
+```
+
+### removeChild & remove
+
+> `**removeChild()`\*\*
+
+- 제거하려는 요소의 부모에 메서드를 호출해서 요소를 제거한다.
+- ex) <li> 태그 부분을 제거하고 싶다면 부모인 <ul> 태그를 가져와 removeChild를 적용한다.
+
+```jsx
+const firstLi = document.querySelector("li");
+const ul = firstLi.parentElement;
+
+ul.removeChild(firstLi);
+
+//요약
+firstLi.parentElement.removeChild(firstLi);
+
+//삭제하려는 요소를 가져오고, parentElement를 사용해 부모 요소를 가져와야 하는 번거로움이 있다.
+//번거로움을 없애고자 remove를 사용
+```
+
+> **`remove()`**
+
+- 제거하려는 요소에 바로 호출하는 메서드이기에 부모나 자식을 신경쓰지 않아도 된다.
+
+```jsx
+const firstLi = document.querySelector("li");
+firstLi.remove();
 ```
