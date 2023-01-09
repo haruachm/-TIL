@@ -9,7 +9,6 @@ colorBtn.addEventListener("click", () => {
   h1.innerText = newColor;
 
   if (newColor[0] + newColor[1] + newColor[2] < 255) {
-    console.log("dd");
     h1.style.color = "rgb(255, 255, 255)";
   }
 });
