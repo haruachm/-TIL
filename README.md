@@ -26,3 +26,4 @@ Today I Learned.
 # Flutter
 - [개발환경세팅](https://github.com/haruachm/-TIL/blob/main/Flutter/1_Development-Evironment.md)
 - [다트(Dart) 기본 문법 - 변수, 컬렉션, List, Set, Map](https://github.com/haruachm/-TIL/blob/main/Flutter/2-1_Dart-Basic.md)
+- [다트(Dart) 기본 문법 - 변수, 컬렉션, List, Set, Map](https://github.com/haruachm/-TIL/blob/main/Flutter/2-2_Dart-Basic2.md)
