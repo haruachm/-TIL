@@ -4,7 +4,7 @@
 
 프로그램의 시작을 main()으로 알리며, 중괄호 사이에 코드를 작성한다. 괄호 ()안에 매개변수를 지정할 수 있다.
 
-```
+```dart
 void main() {
 
 }
@@ -14,7 +14,7 @@ void main() {
 
 문자열을 콘솔에 출력한다.
 
-```
+```dart
 void main(){
 	print("안녕");
 }
@@ -26,7 +26,7 @@ void main(){
 
 컴파일 될 때는 **추론된 타입으로 치환**되어 적용이 된다.
 
-```
+```dart
 void main() {
   var num = 1;
   print(num);
@@ -43,7 +43,7 @@ var는 자동으로 변수 타입을 유추하지만 **직접적으로 변수 �
 
 var 타입은 추론된 타입을 고정하지만, dynamic 키워드를 사용하면 타입이 고정되지 않고 다른 타입의 값을 변수에 저장할 수 있게 된다.
 
-```
+```dart
 void main() {
   dynamic num = 1;
   print(num);
@@ -62,7 +62,7 @@ final과 const를 사용해 선언한 변수는 값을 선언한 이후로 변�
 
 그렇기 때문에 코드를 실행하지 않는 상태에서 값이 확정되면 const, 실행될 때 확정되는 경우엔 final을 사용한다.
 
-```
+```dart
 void main() {
   const num = 1;
   final str = '안녕';
@@ -81,7 +81,7 @@ void main() {
 
 리스트(List)는 여러 값을 순서대로 하나의 변수에 저장할 때 사용되며 '인덱스'의 형식으로 특정 값을 접근할 수 있다. 첫 번째 값은 인덱스 '0'으로 접근한다.
 
-```
+```dart
 void main() {
   List<String> name = ['철수', '영희', '짱구'];
 
@@ -99,7 +99,7 @@ void main() {
 
 add()는 List에 값을 추가할 때 사영되며 값을 add() 괄호 안에 매개변수 형태로 값을 추가할 수 있다.
 
-```
+```dart
 void main() {
   List<String> name = ['철수', '영희', '짱구'];
 
@@ -120,7 +120,7 @@ void main() {
 
 마지막 값까지 접근이 끝나고 조건에 맞는 값들을 기반으로 **이터러블(Iterable)**이 반환된다.
 
-```
+```dart
 void main() {
   List<String> name = ['철수', '영희', '짱구'];
 
@@ -139,7 +139,7 @@ void main() {
 
 where을 쓰면  ( ) 괄호의 이터러블(Iterable) 형태로 출력이 되는데, 이를 다시 List로 변환할 때는 **.toList()**를 사용한다.
 
-```
+```dart
  print(newName);
 
  print(newName.toList());
@@ -152,7 +152,7 @@ where을 쓰면  ( ) 괄호의 이터러블(Iterable) 형태로 출력이 되�
 
 리스트에 있는 값들을 순서대로 접근하면서 값을 변경할 수 있다. map()의 매개변수로는 함수를 입력해야 하며, 해당 함수의 매개변수로 리스트의 값이 순서대로 입력된다. where()와 마찬가지로 이터러블(Iterable)을 반환한다.
 
-```
+```dart
 void main() {
   List<String> name = ['철수', '영희', '짱구'];
 
@@ -175,7 +175,7 @@ void main() {
 
 reduce() 함수는 매개변수로 함수를 입력받으며 함수의 매개변수로는 2개의 값을 받는데, 첫 번째 매개변수는 첫 번째 값, 두 번째 매개변수엔 두 번째 값이 들어가며, 순회를 할 대마다 첫 번째 매개변수에 값이 쌓여간다.
 
-```
+```dart
 void main() {
   List<String> name = ['철수', '영희', '짱구'];
 
@@ -196,7 +196,7 @@ void main() {
 
 키와 값을 접근해 반환할 수 있다.
 
-```
+```dart
 void main() {
   Map<String, String> music = {
     '곰세마리' : '동요',
@@ -217,7 +217,7 @@ Set는 중복이 없는 값들의 집합이다. Set<타입> 이름으로 선언�
 
 **.contains()**로 값 포함 여부를 확인하거나 **.toList()**로 리스트 형태로 변환, **.form()**으로 Set 타입으로 변환이 가능하다.
 
-```
+```dart
 void main() {
   Set<String> name = {'철수', '짱구', '맹구', '유리'};
 
